@@ -15,11 +15,14 @@
   "status",
   "employee_number",
   "dob",
+  "age",
   "date_of_joining",
   "mobile",
   "department",
-  "employee_education"
- ],
+  "employee_education",
+  "cv",
+  "cv_validation"
+
  "fields": [
   {
    "fieldname": "first_name",
@@ -39,7 +42,10 @@
   {
    "fieldname": "full_name",
    "fieldtype": "Data",
-   "label": "Full Name"
+
+   "label": "Full Name",
+   "read_only": 1
+
   },
   {
    "fieldname": "image",
@@ -70,7 +76,10 @@
   {
    "fieldname": "mobile",
    "fieldtype": "Data",
-   "label": "Mobile"
+
+   "label": "Mobile",
+   "length": 10
+
   },
   {
    "fieldname": "department",
@@ -83,11 +92,32 @@
    "fieldtype": "Table",
    "label": "Employee Education",
    "options": "Employee Education"
+
+  },
+  {
+   "fieldname": "cv",
+   "fieldtype": "Small Text",
+   "label": "CV"
+  },
+  {
+   "fieldname": "cv_validation",
+   "fieldtype": "Data",
+   "label": "CV Validation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age",
+   "read_only": 1
+
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-14 16:56:27.526495",
+
+ "modified": "2023-01-28 14:28:48.082907",
+
  "modified_by": "Administrator",
  "module": "Human Resource",
  "name": "Employee",
