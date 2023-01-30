@@ -23,6 +23,7 @@
    "options": "Employee"
   },
   {
+   "fetch_from": "employee.full_name",
    "fieldname": "employee_name",
    "fieldtype": "Data",
    "label": "Employee Name"
@@ -37,7 +38,7 @@
    "fieldname": "leave_type",
    "fieldtype": "Link",
    "label": "Leave Type",
-   "options": "Leave Type"
+   "options": "Leave Type2"
   },
   {
    "fieldname": "from_date",
@@ -57,7 +58,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-28 17:00:16.404653",
+ "modified": "2023-01-30 10:41:23.360934",
  "modified_by": "Administrator",
  "module": "Human Resource",
  "name": "Leave Allocation2",
