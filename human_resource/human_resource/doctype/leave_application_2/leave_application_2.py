@@ -30,6 +30,7 @@ class LeaveApplication2(Document):
 
     def on_cancel(self):
         self.update_balance_allocation_after_cancel()
+        # TEST
 
     def set_total_leave_days(self):
         if self.to_date and self.from_date:
