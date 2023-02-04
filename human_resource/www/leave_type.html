@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leave Type</title>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #c4c2c2;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+</head>
+<body>
+<h1>Leave Type</h1>
+<table>
+  <tr>
+    <th>Employee Name</th>
+    <th>Leave type</th>
+    <th>Total Leave Days</th>
+      <th>Total Leave Days</th>
+  </tr>
+    {% set leave_types = frappe.get_all('Leave Type2', fields=['leave_type_name', 'max_days', 'applicable_after', 'negative_balance'])%}
+
+  {% for leave_type in leave_types%}
+  <tr>
+    <td>{{leave_type.leave_type_name}}</td>
+    <td>{{leave_type.max_days}}</td>
+    <td>{{leave_type.applicable_after}}</td>
+      <td>{{leave_type.negative_balance}}</td>
+  </tr>
+  <tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

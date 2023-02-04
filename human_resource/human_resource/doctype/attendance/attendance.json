@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2023-01-30 10:20:43.873619",
+ "creation": "2023-02-03 22:22:59.402465",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -9,15 +9,13 @@
  "field_order": [
   "employee",
   "employee_name",
+  "attendance_date",
   "department",
-  "leave_type",
   "status",
-  "leave_balance_before_application",
-  "from_date",
-  "to_date",
-  "total_leave_days",
-  "alternative_employee",
-  "reason",
+  "check_in",
+  "check_out",
+  "work_hours",
+  "late_hours",
   "amended_from"
  ],
  "fields": [
@@ -31,7 +29,15 @@
    "fetch_from": "employee.first_name",
    "fieldname": "employee_name",
    "fieldtype": "Data",
-   "label": "Employee Name"
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Attendance Date",
+   "reqd": 1
   },
   {
    "fetch_from": "employee.department",
@@ -41,56 +47,40 @@
    "options": "Department"
   },
   {
-   "fieldname": "leave_type",
-   "fieldtype": "Link",
-   "label": "Leave Type",
-   "options": "Leave Type2"
-  },
-  {
+   "default": "Present",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nApproved\nRejected"
+   "options": "Present\nAbsent\nHalf Day"
   },
   {
-   "fieldname": "leave_balance_before_application",
-   "fieldtype": "Int",
-   "label": "Leave Balance Before Application",
+   "fieldname": "check_in",
+   "fieldtype": "Time",
+   "label": "Check In"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Time",
+   "label": "Check Out"
+  },
+  {
+   "fieldname": "work_hours",
+   "fieldtype": "Float",
+   "label": "Work Hours ",
    "read_only": 1
   },
   {
-   "fieldname": "from_date",
-   "fieldtype": "Date",
-   "label": "From Date"
-  },
-  {
-   "fieldname": "to_date",
-   "fieldtype": "Date",
-   "label": "To Date"
-  },
-  {
-   "fieldname": "total_leave_days",
-   "fieldtype": "Int",
-   "label": "Total Leave Days",
+   "fieldname": "late_hours",
+   "fieldtype": "Float",
+   "label": "Late Hours ",
    "read_only": 1
-  },
-  {
-   "fieldname": "alternative_employee",
-   "fieldtype": "Link",
-   "label": "Alternative Employee",
-   "options": "Employee"
-  },
-  {
-   "fieldname": "reason",
-   "fieldtype": "Small Text",
-   "label": "Reason"
   },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Leave Application 2",
+   "options": "Attendance",
    "print_hide": 1,
    "read_only": 1
   }
@@ -98,11 +88,10 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-04 14:49:39.550624",
+ "modified": "2023-02-04 14:52:37.102189",
  "modified_by": "Administrator",
  "module": "Human Resource",
- "name": "Leave Application 2",
- "naming_rule": "Expression (old style)",
+ "name": "Attendance",
  "owner": "Administrator",
  "permissions": [
   {
