@@ -1,7 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
- "autoname": "[Full Name]",
+ "autoname": "field:full_name",
  "creation": "2023-01-14 16:56:27.526495",
  "default_view": "List",
  "doctype": "DocType",
@@ -45,7 +44,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Full Name",
-   "read_only": 1
+   "read_only": 1,
+   "unique": 1
   },
   {
    "fieldname": "image",
@@ -111,7 +111,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-02-01 14:02:54.745019",
+ "modified": "2023-02-04 15:21:46.193873",
  "modified_by": "Administrator",
  "module": "Human Resource",
  "name": "Employee",

@@ -32,12 +32,13 @@ class Employee(Document):
 		self.age(),
 		self.full_name()
 
-	def after_insert(self):
+	def before_save(self):
 		self.cv_validation_()
 		self.validate_mobile()
 		self.get_age()
 		self.validate_age()
 		self.get_fullname()
+
 		self.validate_education()
 
 	def cv_validation_(self):

@@ -26,7 +26,7 @@
    "options": "Employee"
   },
   {
-   "fetch_from": "employee.first_name",
+   "fetch_from": "employee.full_name",
    "fieldname": "employee_name",
    "fieldtype": "Data",
    "label": "Employee Name",
@@ -67,12 +67,14 @@
    "fieldname": "work_hours",
    "fieldtype": "Float",
    "label": "Work Hours ",
+   "non_negative": 1,
    "read_only": 1
   },
   {
    "fieldname": "late_hours",
    "fieldtype": "Float",
    "label": "Late Hours ",
+   "non_negative": 1,
    "read_only": 1
   },
   {
@@ -88,7 +90,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-02-04 14:52:37.102189",
+ "modified": "2023-02-05 20:17:19.400201",
  "modified_by": "Administrator",
  "module": "Human Resource",
  "name": "Attendance",
